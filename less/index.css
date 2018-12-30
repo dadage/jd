@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* 在移动端给所有元素设置box-sizing:border-box; 让盒模型计算方式固定为 设置的宽高 不会被padding或者border影响 */
+  box-sizing: border-box;
+  /* 在移动端去除一些按住高亮的背景色 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* 禁止页面文字选择 ，此属性不继承，一般加在body上规定整个body的文字都不会自动调整 */
+  -webkit-user-select: none;
+  /* 禁止文字自动调整大小(默认情况下旋转设备的时候文字大小会发生变化)，此属性也不继承，一般加在body上规定整个body的文字都不会自动调整  */
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  font-size: .14rem;
+  font-family: '微软雅黑';
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+li {
+  list-style: none;
+}
+input {
+  /* input内外边框都去掉 */
+  border: 0;
+  outline: 0;
+}
+img {
+  /* 设置图标标签对齐方式 中线对齐 解决图片距离块级元素3px间距 */
+  vertical-align: middle;
+}
+input,
+button {
+  /* 消除输入框和按钮的原生外观，在iOS上加上这个属性才能给按钮和输入框自定义样式  */
+  -webkit-appearance: none;
+  /* 去掉IOS移除原生控件样式 */
+  -webkit-touch-callout: none;
+}
+#header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 999;
+}
+#header .icon-logo {
+  width: 0.8rem;
+  height: 0.45rem;
+  padding: 0.1rem 0.11rem;
+  display: block;
+  background: url('../images/sprites.png') no-repeat;
+  background-position: 0 -1.05rem;
+  background-size: 2rem 2rem;
+  background-origin: content-box;
+  background-clip: content-box;
+}
+#header form {
+  flex: 1;
+  position: relative;
+}
+#header form input {
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 15px;
+  padding-left: 0.4rem;
+  font-size: .14rem;
+}
+#header form i {
+  height: 0.2rem;
+  width: 0.2rem;
+  position: absolute;
+  background: url('../images/sprites.png') no-repeat;
+  background-position: -0.6rem -1.1rem;
+  background-size: 2rem 2rem;
+  top: 0.06rem;
+  left: 0.1rem;
+}
+#header .login {
+  width: 0.5rem;
+  text-align: center;
+  color: white;
+}
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+#footer ul {
+  display: flex;
+}
+#footer ul li {
+  flex: 1;
+}
+#footer ul li a {
+  display: block;
+  text-align: center;
+}
+#footer ul li a img {
+  height: 0.5rem;
+  width: 0.6rem;
+}
+#slide img {
+  width: 100%;
+}
+#nav {
+  padding: 0.1rem;
+}
+#nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav ul li {
+  width: 25%;
+  text-align: center;
+}
+#nav ul li img {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+#nav ul li p {
+  margin: 0.08rem 0;
+}
+#products {
+  background-color: #f5f5f5;
+  padding: 0.2rem 0.1rem 0.6rem 0.1rem;
+}
+#products #seckill {
+  background-color: #fff;
+}
+#products #seckill .title {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.05rem;
+}
+#products #seckill .title .left {
+  display: flex;
+}
+#products #seckill .title .left i {
+  margin-left: 0.1rem;
+}
+#products #seckill .title .left i img {
+  height: 0.25rem;
+  width: 0.2rem;
+}
+#products #seckill .title .left > span {
+  margin-left: 0.1rem;
+  color: #de181b;
+}
+#products #seckill .title .left .seckill-time {
+  margin-left: 0.1rem;
+}
+#products #seckill .title .left .seckill-time span {
+  display: inline-block;
+  height: 0.15rem;
+  width: 0.15rem;
+  text-align: center;
+  line-height: 0.15rem;
+}
+#products #seckill .title .left .seckill-time span:not(:nth-child(3n)) {
+  background-color: black;
+  color: white;
+}
+#products #seckill .content {
+  padding-bottom: 0.1rem;
+}
+#products #seckill .content ul {
+  display: flex;
+}
+#products #seckill .content ul li {
+  flex: 1;
+  text-align: center;
+}
+#products #seckill .content ul li img {
+  width: 100%;
+}
+#products #seckill .content ul li + li {
+  border-left: solid 1px #eee;
+}
+#products #seckill .content ul li p span {
+  color: #de181b;
+}
+#products #jd-market {
+  background-color: #fff;
+  margin-top: 0.1rem;
+}
+#products #jd-market .jd-product-title {
+  border-bottom: solid 1px #f5f5f5;
+}
+#products #jd-market .jd-product-title h4 {
+  height: 0.3rem;
+  line-height: 0.3rem;
+  padding-left: 0.2rem;
+  position: relative;
+  font-weight: normal;
+}
+#products #jd-market .jd-product-title h4::before {
+  content: '';
+  position: absolute;
+  width: 0.04rem;
+  height: 0.15rem;
+  background-color: #de181b;
+  left: 0.1rem;
+  top: 0.08rem;
+}
+#products #jd-market .jd-market-content {
+  display: flex;
+}
+#products #jd-market .jd-market-content .left {
+  flex: 1;
+  border-left: solid 1px #eee;
+}
+#products #jd-market .jd-market-content .left img {
+  width: 100%;
+}
+#products #jd-market .jd-market-content .right {
+  flex: 1;
+  border-left: solid 1px #eee;
+}
+#products #jd-market .jd-market-content .right a img {
+  width: 100%;
+  border-bottom: solid 1px #eee;
+}

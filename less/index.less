@@ -1,0 +1,192 @@
+@import 'base.less';
+
+// 轮播区域
+#slide {
+    img {
+        width: 100%;
+    }
+}
+
+// 导航区域
+#nav {
+    padding: 0.1rem;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            width: 25%;
+            text-align: center;
+            img {
+                width: 0.4rem;
+                height: 0.4rem;
+            }
+            p {
+                margin: 0.08rem 0;
+            }
+        }
+    }
+}
+
+// 产品区域
+#products {
+    background-color: #f5f5f5;
+    padding: 0.2rem 0.1rem 0.6rem 0.1rem;
+    
+    // #seckill {
+       
+    //     width: 100%;
+    //     background-color: #fff;
+    //     .seckill-title {
+    //         height: 0.3rem;
+    //         line-height: 0.3rem;
+    //         position: relative;
+    //         i {
+    //             margin-left: 0.05rem;
+    //             img {
+    //                 width: 0.2rem;
+    //                 height: 0.25rem;
+    //             }
+    //         }
+    //         .seckill-name {
+    //             margin-left: 0.05rem;
+    //             color:#de181b;
+    //         }
+    //         a {
+    //             position: absolute;
+    //             right: 0;
+    //             top: 0;
+    //         }
+    //     }
+    //     .seckill-content {   
+    //         width: 100%;
+    //         ul{
+    //             display: flex;
+    //             li+li {
+    //                 border-left: solid 1px #eee;
+    //             }
+    //             li {
+    //                 flex: 1;
+    //                 text-align: center;
+                    
+    //                 img {
+    //                     width: 100%;
+    //                 }
+    //                 span {
+    //                     color: #de181b;
+    //                 }
+    //             }
+
+    //         }
+           
+    //     }
+    // }
+
+    #seckill {
+        background-color: #fff;
+        .title {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 0.05rem;
+            .left {
+                display: flex;
+                i {
+                    margin-left: 0.1rem;
+                    img {
+                        height: 0.25rem;
+                        width: 0.2rem;
+                    }
+                }
+                >span {
+                    margin-left: 0.1rem;
+                    color: @main-color;
+                }
+                .seckill-time {
+                    margin-left: 0.1rem;
+                   span {
+                    display: inline-block;
+                    height: 0.15rem;
+                    width: 0.15rem;
+                    text-align: center;
+                    line-height: 0.15rem;
+                    &:not(:nth-child(3n)){
+                        background-color: black;
+                        color: white;
+                    }
+                   }
+                }
+            }
+        }
+        .content {
+            padding-bottom: 0.1rem;
+            ul {
+                display: flex;
+                li {
+                    flex: 1;
+                    img {
+                        width: 100%;
+                    }
+                    &+li {
+                        border-left: solid 1px #eee;
+                    }
+                    text-align: center;
+                    p {
+                        span {
+                            color: @main-color;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+    #jd-market {
+        background-color: #fff;
+        margin-top: 0.1rem;
+        .jd-product-title {
+            border-bottom: solid 1px #f5f5f5;
+           h4 {
+            height: 0.3rem;
+            line-height: 0.3rem;
+            padding-left: 0.2rem;
+            position: relative;
+            font-weight: normal;
+            &::before {
+                content:'';
+                position: absolute;
+                width: 0.04rem;
+                height: 0.15rem;
+                background-color: #de181b;
+                left: 0.1rem;
+                top: 0.08rem;
+
+            }
+           }
+        }
+        .jd-market-content {
+            display: flex;
+            // width: 100%;
+            .left {
+                flex: 1;
+                img {
+                    width: 100%;
+                }
+                border-left: solid 1px #eee;
+            }
+            .right {
+                flex: 1;
+                a {
+                    img {
+                        width: 100%;
+                        border-bottom: solid 1px #eee;
+                    }
+                    
+                }
+                
+                border-left: solid 1px #eee;
+            }
+            
+        }
+    }
+}
+
